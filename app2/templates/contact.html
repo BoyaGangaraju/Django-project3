@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0f24;
+      color: #eef2f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .contact-container {
+      max-width: 700px;
+      width: 100%;
+      background: #1e2440;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    .contact-container h1 {
+      text-align: center;
+      color: #58a6ff;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-container p {
+      text-align: center;
+      color: #c0c8d1;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.95rem;
+      color: #c0c8d1;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #2a314d;
+      color: #fff;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+      resize: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: 2px solid #58a6ff;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: #58a6ff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      background: #3f7acc;
+    }
+
+    .contact-info {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #b8c3d0;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #58a6ff;
+    }
+
+    @media (max-width: 500px) {
+      .contact-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="contact-container">
+    <h1>Get in Touch</h1>
+    <p>We’d love to hear from you! Send us a message below.</p>
+
+    <form>
+      <div class="form-group">
+        <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message"><i class="fa-solid fa-message"></i> Message</label>
+        <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p><i class="fa-solid fa-phone"></i> +91 12345 67890</p>
+      <p><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana, India</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Animated Navbar UI</title>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+    }
+    
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      height: 70px;
+      background: linear-gradient(90deg, #14202e, #1f4068);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
+      animation: float 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      0% { transform: translateZ(0px); }
+      100% { transform: translateZ(20px); }
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #eee;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a ion-icon {
+      font-size: 22px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #58a6ff;
+    }
+
+    nav ul li a:hover ion-icon {
+      transform: scale(1.3);
+      color: #58a6ff;
+    }
+
+    /* HERO CONTENT */
+    .hero {
+      margin-top: 80px;
+      font-size: 2rem;
+      animation: textFloat 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes textFloat {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="http://127.0.0.1:8000/">Home</a></li>
+      <li><a href="http://127.0.0.1:8000/about/"  target="_blank">About</a></li>
+      <li><a href="http://127.0.0.1:8000/contact/"  target="_blank">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="hero" id="home">
+    <h1>Welcome to My 3D Navbar</h1>
+    <p>Hover on the links to see the 3D animated effect.</p>
+  </div>
+
+  <section id="about" style="margin-top: 60px;">
+    <h2>About</h2>
+    <p>This section is about the website.</p>
+  </section>
+
+  <section id="contact" style="margin-top: 40px;">
+    <h2>Contact</h2>
+    <p>Email: yourname@example.com</p>
+  </section>
+
+</body>
+</html>
